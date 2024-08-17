@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:wght@500&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-bg-color: #f4f6fc;
+    --primary-text-color: #0a192f;
+    --secondary-text-color: #63788e;
+    --accent-color: #0077b6;
+    --accent-color-dark: #005f8c;
+    --card-bg-color: #ffffff;
+    --card-shadow-color: rgba(0, 119, 182, 0.2);
+    --card-hover-bg: #e0f7ff;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: var(--primary-text-color);
+    background-color: var(--primary-bg-color);
+    overflow-x: hidden;
+}
+
+p {
+    font-family: "Roboto", sans-serif;
+    color: var(--secondary-text-color);
+    line-height: 1.4rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    max-width: 1180px;
+    margin-inline: auto;
+    overflow: hidden;
+}
+
+nav {
+    background-color: var(--accent-color);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    left: 0;
+    right: 0;
+    transition: background-color 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+}
+
+nav:hover {
+    background-color: var(--accent-color-dark);
+}
+
+.main-nav {
+    justify-content: space-between;
+    width: 100%;
+    padding-block: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.company-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.company-logo img {
+    width: 50px; 
+}
+
+.nav-links {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 1;
+    gap: 20px;
+}
+
+.nav-links ul {
+    display: flex;
+    gap: 20px;
+}
+
+.hover-link {
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.hover-link:hover {
+    color: var(--card-bg-color);
+}
+
+.hover-link:active {
+    color: var(--card-hover-bg);
+}
+
+.nav-item.active {
+    color: var(--card-bg-color);
+    border-bottom: 2px solid var(--card-bg-color);
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
+}
+
+.news-input {
+    width: 200px;
+    height: 32px;
+    padding-inline: 12px;
+    border-radius: 4px;
+    border: 2px solid #bbd0e2;
+    font-family: "Roboto", sans-serif;
+}
+
+.search-button {
+    background-color: var(--card-bg-color);
+    color: var(--accent-color);
+    padding: 8px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.search-button:hover {
+    background-color: var(--card-hover-bg);
+    transform: scale(1.05);
+}
+
+main {
+    padding-block: 20px;
+    margin-top: 80px;
+}
+
+.cards-container {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    align-items: start;
+}
+
+.card {
+    width: 360px;
+    min-height: 400px;
+    box-shadow: 0 0 8px var(--card-shadow-color);
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: var(--card-bg-color);
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+    box-shadow: 1px 1px 16px var(--card-shadow-color);
+    background-color: var(--card-hover-bg);
+    transform: translateY(-5px);
+}
+
+.card-header img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 12px;
+}
+
+.news-source {
+    margin-block: 12px;
+}
